@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 import { ConvexProvider, ConvexReactClient } from "convex/react";
-import { useQuery, useMutation } from "../convex/_generated/react";
+import { useQuery, useMutation } from "convex/react";
 import { ContainerCounter } from "../components/ContainerCounter";
 import "../app/globals.css";
 
