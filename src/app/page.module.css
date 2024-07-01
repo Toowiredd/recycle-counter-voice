@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.counters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.counter {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+}
+
+.counter h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.counter p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.counter button {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.resetAll {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
