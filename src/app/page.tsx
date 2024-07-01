@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { ConvexProvider, useConvex } from "convex/react";
-import convexConfig from "../convex.json";
+import convexConfig from "../../convex.json";
 import { ConvexReactClient } from "convex/react";
-import { useQuery, useMutation } from "../convex/_generated/react";
+import { useQuery, useMutation } from "../../convex/_generated/react";
 import { ContainerCounter } from "../components/ContainerCounter";
 
 const convex = new ConvexReactClient(convexConfig.origin);
