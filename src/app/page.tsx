@@ -17,26 +17,38 @@ export default function Home() {
   );
 
   const incrementCounter = (type: string) => {
-    setCounters((prevCounters) => ({
-      ...prevCounters,
-      [type]: prevCounters[type] + 1,
-    }));
+    try {
+      setCounters((prevCounters) => ({
+        ...prevCounters,
+        [type]: prevCounters[type] + 1,
+      }));
+    } catch (error) {
+      console.error(`Failed to increment counter for ${type}:`, error);
+    }
   };
 
   const resetCounter = (type: string) => {
-    setCounters((prevCounters) => ({
-      ...prevCounters,
-      [type]: 0,
-    }));
+    try {
+      setCounters((prevCounters) => ({
+        ...prevCounters,
+        [type]: 0,
+      }));
+    } catch (error) {
+      console.error(`Failed to reset counter for ${type}:`, error);
+    }
   };
 
   const resetAllCounters = () => {
-    setCounters(
-      containerTypes.reduce((acc, type) => {
-        acc[type] = 0;
-        return acc;
-      }, {} as Record<string, number>)
-    );
+    try {
+      setCounters(
+        containerTypes.reduce((acc, type) => {
+          acc[type] = 0;
+          return acc;
+        }, {} as Record<string, number>)
+      );
+    } catch (error) {
+      console.error("Failed to reset all counters:", error);
+    }
   };
 
   return (
