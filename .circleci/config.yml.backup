@@ -1,9 +1,4 @@
-# DISABLED AUTO-RUN: Workflows disabled by commenting out workflow section
-# Converted to manual execution only - 2025-10-18
-# Backup available at: config.yml.backup
-# Note: CircleCI requires manual trigger via API or web UI
-
-# # This config was automatically generated from your source code
+# This config was automatically generated from your source code
 # Stacks detected: deps:node:.
 version: 2.1
 orbs:
@@ -37,7 +32,7 @@ jobs:
       - run:
           name: deploy
           command: '#e.g. ./deploy.sh'
-# workflows:
+workflows:
   build:
     jobs:
       - build-node
